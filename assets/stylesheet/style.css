@@ -1,0 +1,593 @@
+@font-face {
+  font-family: fonthead;
+  src: url(../font/Inter-ExtraBold.ttf);
+}
+@font-face {
+  font-family: fonttext;
+  src: url(../font/Inter-Regular.ttf);
+}
+body {
+  font-family: fonttext;
+  background-image: url(../img/wd-furniture-background.jpg);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: fonthead;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+}
+.home > .row {
+  height: 10%;
+}
+.home > .row > header {
+  padding-left: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.home > .row > header > nav ul li {
+  margin: 10px;
+}
+.home > .row > header > nav ul li > a {
+  font-size: 22px;
+}
+.home > .row > header > nav ul li > a:hover {
+  color: #f59a57;
+}
+.home section {
+  width: 100%;
+  height: 80%;
+  background-image: url(../img/home.jpg);
+  background-size: cover;
+  background-position: left;
+}
+.home section * {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 30%;
+}
+.home section div {
+  padding-left: 110px;
+  display: flex;
+  width: 100%;
+  transform: translateX(-800px);
+  animation: load 0.8s linear forwards;
+}
+@keyframes load {
+  100% {
+    transform: translateX(0);
+  }
+}
+.home section div:nth-of-type(1) {
+  display: flex;
+  align-items: end;
+}
+.home section div:nth-of-type(1) p {
+  width: 25%;
+  position: relative;
+  color: rgb(75, 73, 73);
+  font-size: 1.5vw;
+  text-transform: capitalize;
+}
+.home section div:nth-of-type(1) p::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: #f59a57;
+  bottom: -8px;
+  left: 25%;
+}
+.home section div:nth-of-type(2) {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.home section div:nth-of-type(2) h1 {
+  margin-top: 100px;
+  font-size: 3vw;
+  color: rgb(75, 73, 73);
+}
+.home section div:nth-of-type(2) a {
+  width: 150px;
+  background-color: whitesmoke;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  border-radius: 50px;
+  text-transform: capitalize;
+  transition: 0.4s;
+  font-size: 18px;
+}
+.home section div:nth-of-type(2) a:hover {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.categories {
+  width: 100%;
+  height: 100vh;
+}
+.categories .row div {
+  width: 100%;
+}
+.categories .row div:nth-of-type(1) {
+  width: 100%;
+}
+.categories .row div:nth-of-type(1) h2,
+.categories .row div:nth-of-type(1) p {
+  padding-left: 100px;
+}
+.categories .row div:nth-of-type(1) h2 {
+  font-size: 2vw;
+  color: rgb(46, 46, 46);
+}
+.categories .row div:nth-of-type(1) p {
+  font-size: 1.2vw;
+  color: rgb(75, 73, 73);
+  padding: 20px 100px;
+}
+.categories .photo-categori .row div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.categories .photo-categori .row div div {
+  width: 25%;
+  padding: 10px;
+}
+.categories .photo-categori .row div div figure,
+.categories .photo-categori .row div div img,
+.categories .photo-categori .row div div .btn,
+.categories .photo-categori .row div div .btn > span {
+  transition: 0.4s;
+}
+.categories .photo-categori .row div div > figure:hover {
+  cursor: pointer;
+}
+.categories .photo-categori .row div div figure {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+.categories .photo-categori .row div div figure:hover::after {
+  opacity: 1;
+}
+.categories .photo-categori .row div div figure:hover > img {
+  width: 100%;
+  height: 100%;
+}
+.categories .photo-categori .row div div figure:hover > .btn {
+  top: -10px;
+}
+.categories .photo-categori .row div div figure:hover > .btn > span {
+  bottom: 80px;
+  opacity: 1;
+}
+.categories .photo-categori .row div div figure::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.578);
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: 0.8s;
+}
+.categories .photo-categori .row div div figure img {
+  width: 110%;
+  height: 110%;
+}
+.categories .photo-categori .row div div figure .btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.categories .photo-categori .row div div figure .btn a {
+  width: 100px;
+  height: 40px;
+  font-size: 22px;
+  text-transform: capitalize;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  z-index: 3;
+}
+.categories .photo-categori .row div div figure .btn span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  z-index: 3;
+}
+
+.Weekly {
+  background-image: url(../img/wd-furniture-background.jpg);
+}
+.Weekly .row {
+  justify-content: center;
+}
+.Weekly .row div {
+  width: 100%;
+}
+.Weekly .row div:nth-of-type(1) {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.Weekly .row div:nth-of-type(1) > h4 {
+  width: 50%;
+  font-size: 1.8vw;
+  color: rgb(36, 36, 36);
+  padding: 20px 120px;
+}
+.Weekly .row div:nth-of-type(1) nav {
+  width: 40%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 100px;
+}
+.Weekly .row div:nth-of-type(1) nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Weekly .row div:nth-of-type(1) nav ul li {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 22px;
+  color: rgb(107, 107, 107);
+}
+.Weekly .row div:nth-of-type(1) nav ul li:hover::after {
+  width: 100%;
+}
+.Weekly .row div:nth-of-type(1) nav ul li:hover {
+  color: black;
+}
+.Weekly .row div:nth-of-type(1) nav ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #f59a57;
+  left: 0;
+  bottom: -5px;
+  transition: 0.4s;
+}
+.Weekly .row div:nth-of-type(2) {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.Weekly .row div:nth-of-type(2) div {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  transition: 0.6s;
+  margin: 15px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 5px rgb(237, 237, 237);
+}
+.Weekly .row div:nth-of-type(2) div:hover {
+  transform: translateY(-12px);
+}
+.Weekly .row div:nth-of-type(2) div figure {
+  width: 100%;
+  height: 100%;
+}
+.Weekly .row div:nth-of-type(2) div figure:hover > figcaption > span {
+  transform: translateY(-50px);
+}
+.Weekly .row div:nth-of-type(2) div figure:hover > figcaption > a {
+  bottom: 5px;
+}
+.Weekly .row div:nth-of-type(2) div figure img {
+  width: 100%;
+  height: 80%;
+}
+.Weekly .row div:nth-of-type(2) div figure figcaption {
+  position: relative;
+}
+.Weekly .row div:nth-of-type(2) div figure figcaption > * {
+  transition: 0.6s;
+}
+.Weekly .row div:nth-of-type(2) div figure figcaption span {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+}
+.Weekly .row div:nth-of-type(2) div figure figcaption span:nth-of-type(2) {
+  color: #f59a57;
+  font-size: 22px;
+}
+.Weekly .row div:nth-of-type(2) div figure figcaption a {
+  width: 150px;
+  height: 35px;
+  background-color: #f59a57;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -50px;
+  font-size: 20px;
+}
+
+.brands {
+  width: 100%;
+  min-height: 70vh;
+}
+.brands .row {
+  padding-top: 50px;
+}
+.brands .row div {
+  width: 100%;
+}
+.brands .row div:nth-of-type(1) {
+  padding: 10px 110px;
+}
+.brands .row div:nth-of-type(1) > h4 {
+  font-size: 1.8vw;
+  color: rgb(21, 21, 21);
+}
+.brands .row div:nth-of-type(1) > p {
+  color: #595959;
+  padding: 10px;
+}
+.brands .row div:nth-of-type(2) {
+  width: 100%;
+}
+.brands .row div:nth-of-type(2) .row {
+  justify-content: space-between;
+}
+.brands .row div:nth-of-type(2) .row > figure {
+  width: 300px;
+  height: 400px;
+  border-radius: 20px;
+  position: relative;
+}
+.brands .row div:nth-of-type(2) .row > figure:hover::after {
+  opacity: 1;
+}
+.brands .row div:nth-of-type(2) .row > figure::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.397);
+  opacity: 0;
+  top: 0;
+  left: 0;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+.brands .row div:nth-of-type(2) .row > figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.brands .row div:nth-of-type(2) .row > figure figcaption {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.brands .row div:nth-of-type(2) .row > figure figcaption p {
+  color: rgb(222, 221, 221);
+}
+
+.rules .row div {
+  width: 100%;
+  min-height: 50vh;
+  padding: 0 110px;
+  padding-top: 50px;
+}
+.rules .row div:nth-of-type(1) {
+  width: 40%;
+}
+.rules .row div:nth-of-type(1) > h4 {
+  font-size: 1.8vw;
+}
+.rules .row div:nth-of-type(1) > figure {
+  width: 550px;
+  height: 550px;
+}
+.rules .row div:nth-of-type(1) > figure > img {
+  width: 100%;
+  height: 100%;
+}
+.rules .row div:nth-of-type(2) {
+  width: 60%;
+}
+.rules .row div:nth-of-type(2) > p:nth-of-type(1) {
+  font-size: 1.2vw;
+}
+.rules .row div:nth-of-type(2) > p:nth-of-type(2) {
+  color: #6d6d6d;
+  padding: 20px 0;
+}
+.rules .row div:nth-of-type(2) ul {
+  position: relative;
+}
+.rules .row div:nth-of-type(2) ul li {
+  transform: translateY(-5px);
+  padding: 5px;
+  list-style-image: url(../img/wd-furniture-dot-list.svg);
+  color: #6d6d6d;
+}
+.rules .row div:nth-of-type(2) figure {
+  width: 90%;
+  padding: 20px 0;
+}
+.rules .row div:nth-of-type(2) figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 200px;
+}
+
+.Furniture {
+  width: 100%;
+  margin-top: 100px;
+}
+.Furniture .row div:nth-of-type(1) {
+  width: 60%;
+  padding-left: 110px;
+}
+.Furniture .row div:nth-of-type(1) h5 {
+  font-size: 1.5vw;
+}
+.Furniture .row div:nth-of-type(1) p {
+  padding: 10px 0;
+}
+.Furniture .row div:nth-of-type(1) div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding-left: 0;
+}
+.Furniture .row div:nth-of-type(1) div figure {
+  width: 250px;
+  height: 350px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 10px;
+  box-shadow: 0 0 2px 3px rgb(235, 233, 233);
+}
+.Furniture .row div:nth-of-type(1) div figure:hover > figcaption {
+  transform: translateY(-45px);
+}
+.Furniture .row div:nth-of-type(1) div figure:hover > figcaption > a:nth-of-type(2) {
+  transform: translateY(-10px);
+}
+.Furniture .row div:nth-of-type(1) div figure > img {
+  width: 100%;
+  height: 100%;
+}
+.Furniture .row div:nth-of-type(1) div figure figcaption {
+  transition: 0.6s;
+}
+.Furniture .row div:nth-of-type(1) div figure figcaption > * {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.Furniture .row div:nth-of-type(1) div figure figcaption a:nth-of-type(1) {
+  bottom: 40px;
+  font-size: 1.2vw;
+}
+.Furniture .row div:nth-of-type(1) div figure figcaption a:nth-of-type(2) {
+  width: 150px;
+  height: 40px;
+  background-color: #f59a57;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-size: 20px;
+  transition: 0.6s;
+}
+.Furniture .row div:nth-of-type(1) div figure figcaption span {
+  bottom: 20px;
+  color: #f59a57;
+}
+.Furniture .row div:nth-of-type(2) {
+  width: 40%;
+}
+.Furniture .row div:nth-of-type(2) figure {
+  width: 450px;
+  height: 600px;
+}
+.Furniture .row div:nth-of-type(2) figure img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+footer {
+  width: 100%;
+  min-height: 40vh;
+  background-color: #181818;
+  margin-top: 100px;
+}
+footer .row div:nth-of-type(1) {
+  width: 60%;
+  display: flex;
+  padding: 50px 100px;
+  align-items: center;
+}
+footer .row div:nth-of-type(1) ul {
+  padding: 20px;
+}
+footer .row div:nth-of-type(1) ul li {
+  color: #7b7b7b;
+  font-size: 22px;
+  cursor: pointer;
+  margin: 20px;
+  position: relative;
+}
+footer .row div:nth-of-type(1) ul li:hover::after {
+  width: 100%;
+}
+footer .row div:nth-of-type(1) ul li::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: #f59a57;
+  transition: 0.4s;
+}
+footer .row div:nth-of-type(2) {
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+footer .row div:nth-of-type(2) figure {
+  width: 200px;
+  height: 200px;
+}
+footer .row div:nth-of-type(2) figure > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+footer .row div:nth-of-type(2) ul {
+  padding: 10px;
+}
+footer .row div:nth-of-type(2) ul li a {
+  color: white;
+}/*# sourceMappingURL=style.css.map */
